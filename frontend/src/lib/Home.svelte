@@ -10,7 +10,7 @@
     let cadastro = false;
 
     async function getMovies(){
-            const response = await fetch('http://localhost:8000/movies');
+            const response = await fetch('http://18.229.132.40/movies');
             const users = await response.json();
             if(response.ok){
                 return users;
@@ -20,7 +20,7 @@
         }
 
     async function getUsers(){
-        const response = await fetch('http://localhost:8000/user/getall');
+        const response = await fetch('http://18.229.132.40/user/getall');
         const users = await response.json();
         if(response.ok){
             return users;
@@ -30,7 +30,7 @@
     }
 
     async function createMovieFavorite() {
-    const response = await fetch('http://localhost:8000/users/' + user_id + '/' + movie_id , {
+    const response = await fetch('http://18.229.132.40/users/' + user_id + '/' + movie_id , {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

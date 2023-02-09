@@ -7,7 +7,7 @@
     
     async function getArtist() {
         error_search = false;
-        const response = await fetch('http://localhost:8000/person/'+ name_artist);
+        const response = await fetch('http://18.229.132.40/person/'+ name_artist);
         const artist_information = await response.json();
         if(response.ok){
             return artist_information;

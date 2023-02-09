@@ -12,7 +12,7 @@
     let password;
 
     async function getUsers(){
-        const response = await fetch('http://localhost:8000/user/getall');
+        const response = await fetch('http://18.229.132.40/user/getall');
         const users = await response.json();
         if(response.ok){
             return users;
@@ -22,7 +22,7 @@
     }
 
     async function getMoviesUser(){
-        const response = await fetch('http://localhost:8000/movies/' + id);
+        const response = await fetch('http://18.229.132.40/movies/' + id);
         const movies = await response.json();
         if(response.ok){
             let moviesList = [];
@@ -40,7 +40,7 @@
     }
 
     async function getMovieByID(movie_id){
-        const response = await fetch('http://localhost:8000/movies/get-movie-by-id/' + movie_id);
+        const response = await fetch('http://18.229.132.40/movies/get-movie-by-id/' + movie_id);
         const movie = await response.json();
         if(response.ok){
             return movie;
@@ -51,7 +51,7 @@
     
     async function postUser() {
 
-        const response = await fetch('http://localhost:8000/user/create', {
+        const response = await fetch('http://18.229.132.40/user/create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -72,7 +72,7 @@
     }
 
     async function deleteUser(){
-        const response = await fetch('http://localhost:8000/user/'+ id, {
+        const response = await fetch('http://18.229.132.40/user/'+ id, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -87,7 +87,7 @@
     }
 
     async function updateUser() {
-        const response = await fetch('http://localhost:8000/user/' + id, {
+        const response = await fetch('http://18.229.132.40/user/' + id, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
