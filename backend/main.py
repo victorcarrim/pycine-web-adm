@@ -15,8 +15,8 @@ app = FastAPI()
 origins = [
     "http://localhost",
     "http://localhost:5173",
-    "https://main.d9u7s0s8jh8bf.amplifyapp.com/",
-    "http://main.d9u7s0s8jh8bf.amplifyapp.com/",
+    "https://54.207.7.59/",
+    "http://54.207.7.59/",
 ]
 app.add_middleware(
     CORSMiddleware,
