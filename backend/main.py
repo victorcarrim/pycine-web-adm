@@ -16,6 +16,7 @@ origins = [
     "http://localhost",
     "http://localhost:5173",
     "https://main.d9u7s0s8jh8bf.amplifyapp.com/",
+    "http://main.d9u7s0s8jh8bf.amplifyapp.com/",
 ]
 app.add_middleware(
     CORSMiddleware,
